@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>E Ticaret Sitesi</title>
+  
+
+  <style>
+    nav{
+      background-color: white;
+    }
+    .one-edge-shadow {
+              box-shadow: 0 8px 2px -5px rgb(246, 245, 245);
+}
+.display-8{
+  font-weight: 200;
+  font-size: 30px;
+  font-colour: $teal-200;
+}
+
+.Yk_XKkYW .OLpcIFHj .vQI670rJ {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 350px;
+  font-size: 14px;
+  color: #333;
+  background-color: #f3f3f3;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 6px;
+  padding: 10px 120px 10px 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+  line-height: 0;
+}
+#autoCompleteAppWrapper input[type=text] {
+  height: auto;
+  line-height: unset;
+}
+----------
+a {
+  font-size:14px;
+  font-weight:700
+  }
+  .superNav {
+  font-size:13px;
+  
+  }
+  .form-control {
+  outline:none !important;
+  box-shadow: none !important;
+  }
+  @media screen and (max-width:540px){
+  .centerOnMobile {
+    text-align:center
+  }
+  }
+
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+
+<nav class="one-edge-shadow navbar navbar-light sticky-top navbar navbar-expand-lg text-white">
+    <a class="navbar-brand ms-3 text-dark " href="/">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigLzVhzOcwh9U9CTpD7XY8noxyV4lln9Gg8MRr8OJodrhSxlSnrRTQvDzLgNNsv6w6LGhqleVXlGCbC2piXedLQOXn5WHqq3f_8Fs4BnCsy9aUL5v7h9QPw0cbMNhoVvxIC7Nj_zBXpvvz4KALUf-vDw-MI1TlqQD678GxhKR5LGWUnVRxesnfJtVAWg/s16000/ccc.png" style="width:146px;height:100px,color:text-light;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="autoCompleteAppWrapper">
+      <div data-fragment-name="AutoComplete" id="sfx-discovery-search-suggestions">
+        <div class="Yk_XKkYW">
+          <div class="OLpcIFHj">
+            <input data-testid="suggestion" type="text" class="vQI670rJ" tabindex="1" autocomplete="off" maxlength="50" placeholder="Aradığınız ürünü yazınız" value="">
+            <input type="image" src="https://static.tildacdn.com/tild3733-3238-4563-a236-313037373837/11.png" value="submit" style="right: 630px;width:25px;height:25px;bottom: calc(50% - 9px);position: absolute;">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+          </ul>
+
+        {% if request.session.customer %}    
+        <ul class=" navbar-nav my-2 my-lg-0">
+        <li class="nav-item active ">
+          <img src="https://static.tildacdn.com/tild3662-3962-4462-a337-623238383531/user_person_customer.png" style="width:20px;height:20px;right:290px;bottom: calc(50% - 9px);position: absolute;">
+          <a class="nav-link" href="/orders"style="right:215px;bottom: calc(50% - 21px);position: absolute;"><font face="Calibri"size="4"color="#333333">Hesabım</font><span class="sr-only">(current)</span></a>
+        </li>
+          <li class="nav-item active">
+            <img src="https://дверикупи.рф/wp-content/uploads/2021/06/basket1.svg" style="width:20px;height:20px;right:192px;bottom: calc(50% - 10px);position: absolute;">
+            <a class="nav-link" href="/cart"style="right:118px;bottom: calc(50% - 21px);position: absolute;"><font face="Calibri"size="4" color="#333333">Sepetim</font>
+              <span class="sr-only">(current)</span></a>
+          </li>
+        <li class="nav-item active ">
+          <img src="https://cdn-icons-png.flaticon.com/512/2767/2767155.png" style="width:20px;height:20px;right:94px;bottom: calc(50% - 10px);position: absolute;">
+          <a class="nav-link" href="/logout"style="right:21px;bottom: calc(50% - 21px);position: absolute;"><font face="Calibri"size="4" color="#333333">Çıkış Yap</font><span class="sr-only">(current)</span></a>
+        </li>
+        {% else %}
+        <li class="nav-item active">
+          <img src="http://cdn.onlinewebfonts.com/svg/img_115008.png" style="width:20px;height:20px;right:200px;bottom: calc(50% - 10px);position: absolute;">
+          <a class="nav-link" href="/signup"style="right:118px;bottom: calc(50% - 21px);position: absolute;"><font face="Calibri"size="4" color="#333333">Kayıt Ol</font><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <img src="https://static.tildacdn.com/tild3662-3962-4462-a337-623238383531/user_person_customer.png" style="width:20px;height:20px;right:97px;bottom: calc(50% - 10px);position: absolute;">
+          <a class="nav-link" href="/login"style="right:10px;bottom: calc(50% - 21px);position: absolute;"><font face="Calibri"size="4" color="#333333">Giriş Yap</font><span class="sr-only">(current)</span></a>
+        </li>
+        {% endif %}
+        
+        
+
+
+      </ul>
+    </div>
+    
+  </nav>
+  
+  
+  <!---->
+  {% block content %}{% endblock %}
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
